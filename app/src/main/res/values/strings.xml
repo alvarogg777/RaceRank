@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MyTracker</string>
+    <string name="facebook_application_id" translatable="false">325718191109111</string>
+</resources>
