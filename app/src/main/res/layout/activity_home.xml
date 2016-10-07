@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_home"
     android:layout_width="match_parent"
@@ -8,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.alvaro.firebasebasic.com.alvaro.racerank.HomeActivity">
+    tools:context="com.alvaro.racerank.HomeActivity">
 
     <TextView
         android:text="TextView"
@@ -17,19 +18,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="33dp"
+        android:textColor="@color/colorPrimaryDark"
         android:id="@+id/userText" />
-
-    <Button
-        android:text="Start"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="31dp"
-        android:id="@+id/start"
-        android:layout_below="@+id/userText"
-        android:layout_alignRight="@+id/other_routes"
-        android:layout_alignEnd="@+id/other_routes"
-        android:layout_alignLeft="@+id/other_routes"
-        android:layout_alignStart="@+id/other_routes" />
 
     <Button
         android:text="Log Out"
@@ -40,23 +30,41 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:text="My Runs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
-        android:id="@+id/my_runs"
-        android:layout_below="@+id/start"
-        android:layout_alignLeft="@+id/start"
-        android:layout_alignStart="@+id/start"
-        android:layout_alignRight="@+id/start"
-        android:layout_alignEnd="@+id/start" />
+    <!--        app:srcCompat="@drawable/com_facebook_profile_picture_blank_square"-->
+    <com.android.volley.toolbox.NetworkImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/start"
+        android:layout_toStartOf="@+id/start" />
 
     <Button
         android:text="Other routes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/other_routes"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/my_runs"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+
+    <Button
+        android:text="My Runs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:id="@+id/my_runs"
+        android:layout_below="@+id/start"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Start"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/start"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/imageView"
+        android:layout_alignLeft="@+id/my_runs"
+        android:layout_alignStart="@+id/my_runs" />
 </RelativeLayout>

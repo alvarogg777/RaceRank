@@ -49,9 +49,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent i=new Intent(this,HomeActivity.class);
                 i.putExtra("user_id",auth.getCurrentUser().getUid());
                 i.putExtra("display_name",auth.getCurrentUser().getDisplayName());
-//        login.setVisibility(View.GONE);
-//        signin.setVisibility(View.GONE);
-                Log.v("COME ON","  aaa");
+                i.putExtra("pic",auth.getCurrentUser().getPhotoUrl());
+//                Log.v("COME ON","  aaa");
                 startActivity(i);
             }else{
                 //user not authenticated
@@ -116,6 +115,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent i=new Intent(this,HomeActivity.class);
         i.putExtra("user_id",auth.getCurrentUser().getUid());
         i.putExtra("display_name",auth.getCurrentUser().getDisplayName());
+        i.putExtra("pic",auth.getCurrentUser().getPhotoUrl());
 //        login.setVisibility(View.GONE);
 //        signin.setVisibility(View.GONE);
         Log.v("COME ON","  aaa");
